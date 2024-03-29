@@ -1,5 +1,6 @@
 package com.stock.Service.implementation;
 
+import com.stock.Enum.StockType;
 import com.stock.Model.Stock;
 import com.stock.Repository.StockRepository;
 import com.stock.Service.StockService;
@@ -23,6 +24,7 @@ public class StockServiceImpl implements StockService {
             s1.setQuantity(10);
             s1.setListingPrice(100);
             s1.setPricePerUnit(10);
+            s1.setStockType(StockType.COMMON);
             stockRepository.save(s1);
 
             Stock s2 = new Stock();
@@ -30,6 +32,7 @@ public class StockServiceImpl implements StockService {
             s2.setQuantity(10);
             s2.setListingPrice(50);
             s2.setPricePerUnit(5);
+            s2.setStockType(StockType.COMMON);
             stockRepository.save(s2);
 
             Stock s3 = new Stock();
@@ -37,6 +40,7 @@ public class StockServiceImpl implements StockService {
             s3.setQuantity(10);
             s3.setListingPrice(200);
             s3.setPricePerUnit(20);
+            s3.setStockType(StockType.PREFERRED);
             stockRepository.save(s3);
 
             Stock s4 = new Stock();
@@ -44,6 +48,7 @@ public class StockServiceImpl implements StockService {
             s4.setQuantity(10);
             s4.setListingPrice(150);
             s4.setPricePerUnit(15);
+            s4.setStockType(StockType.PREFERRED);
             stockRepository.save(s4);
 
         }

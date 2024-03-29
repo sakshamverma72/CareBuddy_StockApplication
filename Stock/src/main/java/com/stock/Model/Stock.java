@@ -1,9 +1,7 @@
 package com.stock.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.stock.Enum.StockType;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -13,6 +11,8 @@ public class Stock {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer stockId;
     private String stockName;
+    @Enumerated(EnumType.STRING)
+    private StockType stockType;
     private Integer quantity;
     private Integer listingPrice;
     private Integer pricePerUnit;

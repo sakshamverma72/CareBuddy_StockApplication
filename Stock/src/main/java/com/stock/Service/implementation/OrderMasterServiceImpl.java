@@ -74,7 +74,7 @@ public class OrderMasterServiceImpl implements OrderMasterService {
         td.setStockName(stockName);
         td.setListingPrice(stock.getListingPrice());
         td.setQuantity(quantity);
-        td.setStockType(StockType.valueOf("BUY"));
+        td.setStockType(stock.getStockType());
         td.setPricePerUnit(stock.getPricePerUnit());
         td.setTradeDateTime(LocalDateTime.now());
         td.setOrderMaster(om);
